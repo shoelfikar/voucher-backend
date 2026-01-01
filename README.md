@@ -44,7 +44,7 @@ backend/
 
 1. **Clone the repository**
    ```bash
-   cd backend
+   cd voucher-backend
    ```
 
 2. **Install dependencies**
@@ -84,12 +84,7 @@ backend/
    psql -U postgres -c "CREATE DATABASE voucher_db;"
    ```
 
-5. **Run database migrations**
-   ```bash
-   make migrate-up
-   ```
-
-   The application also supports auto-migration on startup using GORM.
+   The application supports auto-migration on startup using GORM.
 
 ## Running the Application
 
@@ -154,15 +149,6 @@ curl -X POST http://localhost:8080/api/v1/login \
 ```
 
 ## CSV Format
-
-For importing vouchers, use this CSV format:
-
-```csv
-voucher_code,discount_percent,expiry_date
-DISC10,10.00,2025-12-31
-SAVE20,20.00,2025-06-30
-PROMO50,50.00,2025-03-15
-```
 
 **Validation Rules:**
 - `voucher_code`: Required, max 50 characters, must be unique
