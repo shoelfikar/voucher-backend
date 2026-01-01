@@ -178,7 +178,7 @@ func (s *voucherServiceImpl) ImportVouchers(file multipart.File) (*domainService
 
 	// Process each row (skip header)
 	for i, record := range records[1:] {
-		rowNum := i + 2 
+		rowNum := i + 2
 
 		voucher, err := s.parseCSVRow(record, rowNum)
 		if err != nil {

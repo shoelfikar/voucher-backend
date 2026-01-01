@@ -9,7 +9,6 @@ Backend API for Voucher Management System built with Go, Gin, and PostgreSQL.
 - **Database**: PostgreSQL
 - **ORM**: GORM
 - **Authentication**: JWT (golang-jwt/jwt v5)
-- **Validation**: go-playground/validator v10
 - **CORS**: gin-contrib/cors
 - **Configuration**: Viper
 
@@ -182,26 +181,8 @@ make test          # Run tests
 make test-coverage # Run tests with coverage
 make clean         # Clean build artifacts
 make install       # Install dependencies
-make format        # Format code
-make lint          # Run linter
-make migrate-up    # Run migrations
-make migrate-down  # Rollback migrations
 ```
 
-### Database Migrations
-
-Migrations are stored in the `migrations/` directory.
-
-```bash
-# Run migrations
-make migrate-up
-
-# Rollback migrations
-make migrate-down
-
-# Force migration to specific version
-make migrate-force v=1
-```
 
 ## Testing
 

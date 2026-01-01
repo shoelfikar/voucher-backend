@@ -47,9 +47,9 @@ func ErrorResponse(message string) Response {
 // ValidationErrorResponse creates a validation error response
 func ValidationErrorResponse(errors interface{}) Response {
 	return Response{
-		Status: "error",
+		Status:  "error",
 		Message: "Validation failed",
-		Errors: errors,
+		Errors:  errors,
 	}
 }
 

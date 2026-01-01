@@ -201,7 +201,6 @@ func (h *VoucherHandler) ImportCSV(c *gin.Context) {
 	}
 	defer file.Close()
 
-
 	if !strings.HasSuffix(header.Filename, ".csv") {
 		c.JSON(http.StatusBadRequest, response.ErrorResponse("Only CSV files are allowed"))
 		return

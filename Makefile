@@ -50,18 +50,8 @@ install:
 	go mod tidy
 	@echo "Dependencies installed"
 
-## lint: Run linter
-lint:
-	@echo "Running linter..."
-	golangci-lint run
-
 ## format: Format code
 format:
 	@echo "Formatting code..."
 	gofmt -w .
 	@echo "Code formatted"
-
-## dev: Run in development mode with auto-reload (requires air)
-dev:
-	@echo "Running in development mode..."
-	air
